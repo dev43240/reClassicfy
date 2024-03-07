@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.1 commit date:2022-12-19, commit time:17:00, hash:55485cb379f7</authoring_tool>
+    </contributor>
+    <created>2023-03-16T20:54:24</created>
+    <modified>2023-03-16T20:54:24</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material_0_001-effect">
+      <profile_COMMON>
+        <newparam sid="steve_png-surface">
+          <surface type="2D">
+            <init_from>steve_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="steve_png-sampler">
+          <sampler2D>
+            <source>steve_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="steve_png-sampler" texcoord="782501bb-1981-5ad0-5edd-c1712a18d06a-mesh-map-0"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="steve_png" name="steve_png">
+      <init_from>steve.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material_0_001-material" name="Material_0.001">
+      <instance_effect url="#Material_0_001-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="rightPants_001-mesh" name="rightPants.001">
+      <mesh>
+        <source id="rightPants_001-mesh-positions">
+          <float_array id="rightPants_001-mesh-positions-array" count="24">0.259375 0.765625 0.140625 0.259375 0.765625 -0.140625 0.259375 -0.015625 0.140625 0.259375 -0.015625 -0.140625 -0.02187496 0.765625 -0.140625 -0.02187496 0.765625 0.140625 -0.02187496 -0.015625 -0.140625 -0.02187496 -0.015625 0.140625</float_array>
+          <technique_common>
+            <accessor source="#rightPants_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightPants_001-mesh-normals">
+          <float_array id="rightPants_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#rightPants_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightPants_001-mesh-map-0">
+          <float_array id="rightPants_001-mesh-map-0-array" count="72">0.125 0.25 0.0625 0.4375 0.0625 0.25 0.0625 0.25 0 0.4375 0 0.25 0.25 0.25 0.1875 0.4375 0.1875 0.25 0.1875 0.25 0.125 0.4375 0.125 0.25 0.0625 0.5 0.125 0.4375 0.125 0.5 0.125 0.4375 0.1875 0.5 0.1875 0.4375 0.125 0.25 0.125 0.4375 0.0625 0.4375 0.0625 0.25 0.0625 0.4375 0 0.4375 0.25 0.25 0.25 0.4375 0.1875 0.4375 0.1875 0.25 0.1875 0.4375 0.125 0.4375 0.0625 0.5 0.0625 0.4375 0.125 0.4375 0.125 0.4375 0.125 0.5 0.1875 0.5</float_array>
+          <technique_common>
+            <accessor source="#rightPants_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="rightPants_001-mesh-vertices">
+          <input semantic="POSITION" source="#rightPants_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#rightPants_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#rightPants_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#rightPants_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="rightLegging_001-mesh" name="rightLegging.001">
+      <mesh>
+        <source id="rightLegging_001-mesh-positions">
+          <float_array id="rightLegging_001-mesh-positions-array" count="24">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#rightLegging_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightLegging_001-mesh-normals">
+          <float_array id="rightLegging_001-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#rightLegging_001-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightLegging_001-mesh-map-0">
+          <float_array id="rightLegging_001-mesh-map-0-array" count="72">0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375</float_array>
+          <technique_common>
+            <accessor source="#rightLegging_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="rightLegging_001-mesh-vertices">
+          <input semantic="POSITION" source="#rightLegging_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#rightLegging_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#rightLegging_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#rightLegging_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 0 3 0 0 4 2 0 5 2 1 6 5 1 7 7 1 8 7 0 9 4 0 10 6 0 11 0 0 12 4 0 13 5 0 14 3 0 15 7 0 16 6 0 17 6 0 18 4 0 19 1 0 20 3 0 21 1 0 22 0 0 23 2 1 24 0 1 25 5 1 26 7 0 27 5 0 28 4 0 29 0 0 30 1 0 31 4 0 32 3 0 33 2 0 34 7 0 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="rightLeg_001-mesh" name="rightLeg.001">
+      <mesh>
+        <source id="rightLeg_001-mesh-positions">
+          <float_array id="rightLeg_001-mesh-positions-array" count="24">0.24375 0.75 0.125 0.24375 0.75 -0.125 0.24375 0 0.125 0.24375 0 -0.125 -0.006249964 0.75 -0.125 -0.006249964 0.75 0.125 -0.006249964 0 -0.125 -0.006249964 0 0.125</float_array>
+          <technique_common>
+            <accessor source="#rightLeg_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightLeg_001-mesh-normals">
+          <float_array id="rightLeg_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#rightLeg_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightLeg_001-mesh-map-0">
+          <float_array id="rightLeg_001-mesh-map-0-array" count="72">0.125 0.5 0.0625 0.6875 0.0625 0.5 0.0625 0.5 0 0.6875 0 0.5 0.25 0.5 0.1875 0.6875 0.1875 0.5 0.1875 0.5 0.125 0.6875 0.125 0.5 0.0625 0.75 0.125 0.6875 0.125 0.75 0.125 0.6875 0.1875 0.75 0.1875 0.6875 0.125 0.5 0.125 0.6875 0.0625 0.6875 0.0625 0.5 0.0625 0.6875 0 0.6875 0.25 0.5 0.25 0.6875 0.1875 0.6875 0.1875 0.5 0.1875 0.6875 0.125 0.6875 0.0625 0.75 0.0625 0.6875 0.125 0.6875 0.125 0.6875 0.125 0.75 0.1875 0.75</float_array>
+          <technique_common>
+            <accessor source="#rightLeg_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="rightLeg_001-mesh-vertices">
+          <input semantic="POSITION" source="#rightLeg_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#rightLeg_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#rightLeg_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#rightLeg_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="leftPants_001-mesh" name="leftPants.001">
+      <mesh>
+        <source id="leftPants_001-mesh-positions">
+          <float_array id="leftPants_001-mesh-positions-array" count="24">0.02187496 0.765625 0.140625 0.02187496 0.765625 -0.140625 0.02187496 -0.015625 0.140625 0.02187496 -0.015625 -0.140625 -0.259375 0.765625 -0.140625 -0.259375 0.765625 0.140625 -0.259375 -0.015625 -0.140625 -0.259375 -0.015625 0.140625</float_array>
+          <technique_common>
+            <accessor source="#leftPants_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftPants_001-mesh-normals">
+          <float_array id="leftPants_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#leftPants_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftPants_001-mesh-map-0">
+          <float_array id="leftPants_001-mesh-map-0-array" count="72">0.125 0 0.0625 0.1875 0.0625 0 0.0625 0 0 0.1875 0 0 0.25 0 0.1875 0.1875 0.1875 0 0.1875 0 0.125 0.1875 0.125 0 0.0625 0.25 0.125 0.1875 0.125 0.25 0.125 0.1875 0.1875 0.25 0.1875 0.1875 0.125 0 0.125 0.1875 0.0625 0.1875 0.0625 0 0.0625 0.1875 0 0.1875 0.25 0 0.25 0.1875 0.1875 0.1875 0.1875 0 0.1875 0.1875 0.125 0.1875 0.0625 0.25 0.0625 0.1875 0.125 0.1875 0.125 0.1875 0.125 0.25 0.1875 0.25</float_array>
+          <technique_common>
+            <accessor source="#leftPants_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="leftPants_001-mesh-vertices">
+          <input semantic="POSITION" source="#leftPants_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#leftPants_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#leftPants_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#leftPants_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="leftLegging_001-mesh" name="leftLegging.001">
+      <mesh>
+        <source id="leftLegging_001-mesh-positions">
+          <float_array id="leftLegging_001-mesh-positions-array" count="24">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#leftLegging_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftLegging_001-mesh-normals">
+          <float_array id="leftLegging_001-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#leftLegging_001-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftLegging_001-mesh-map-0">
+          <float_array id="leftLegging_001-mesh-map-0-array" count="72">0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25 0.234375 0.25</float_array>
+          <technique_common>
+            <accessor source="#leftLegging_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="leftLegging_001-mesh-vertices">
+          <input semantic="POSITION" source="#leftLegging_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#leftLegging_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#leftLegging_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#leftLegging_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 0 3 0 0 4 2 0 5 2 1 6 5 1 7 7 1 8 7 0 9 4 0 10 6 0 11 0 0 12 4 0 13 5 0 14 3 0 15 7 0 16 6 0 17 6 0 18 4 0 19 1 0 20 3 0 21 1 0 22 0 0 23 2 1 24 0 1 25 5 1 26 7 0 27 5 0 28 4 0 29 0 0 30 1 0 31 4 0 32 3 0 33 2 0 34 7 0 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="leftLeg_001-mesh" name="leftLeg.001">
+      <mesh>
+        <source id="leftLeg_001-mesh-positions">
+          <float_array id="leftLeg_001-mesh-positions-array" count="24">0.006249964 0.75 0.125 0.006249964 0.75 -0.125 0.006249964 0 0.125 0.006249964 0 -0.125 -0.24375 0.75 -0.125 -0.24375 0.75 0.125 -0.24375 0 -0.125 -0.24375 0 0.125</float_array>
+          <technique_common>
+            <accessor source="#leftLeg_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftLeg_001-mesh-normals">
+          <float_array id="leftLeg_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#leftLeg_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftLeg_001-mesh-map-0">
+          <float_array id="leftLeg_001-mesh-map-0-array" count="72">0.375 0 0.3125 0.1875 0.3125 0 0.3125 0 0.25 0.1875 0.25 0 0.5 0 0.4375 0.1875 0.4375 0 0.4375 0 0.375 0.1875 0.375 0 0.3125 0.25 0.375 0.1875 0.375 0.25 0.375 0.1875 0.4375 0.25 0.4375 0.1875 0.375 0 0.375 0.1875 0.3125 0.1875 0.3125 0 0.3125 0.1875 0.25 0.1875 0.5 0 0.5 0.1875 0.4375 0.1875 0.4375 0 0.4375 0.1875 0.375 0.1875 0.3125 0.25 0.3125 0.1875 0.375 0.1875 0.375 0.1875 0.375 0.25 0.4375 0.25</float_array>
+          <technique_common>
+            <accessor source="#leftLeg_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="leftLeg_001-mesh-vertices">
+          <input semantic="POSITION" source="#leftLeg_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#leftLeg_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#leftLeg_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#leftLeg_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="rightSleeve_001-mesh" name="rightSleeve.001">
+      <mesh>
+        <source id="rightSleeve_001-mesh-positions">
+          <float_array id="rightSleeve_001-mesh-positions-array" count="24">0.515625 1.515625 0.140625 0.515625 1.515625 -0.140625 0.515625 0.734375 0.140625 0.515625 0.734375 -0.140625 0.234375 1.515625 -0.140625 0.234375 1.515625 0.140625 0.234375 0.734375 -0.140625 0.234375 0.734375 0.140625</float_array>
+          <technique_common>
+            <accessor source="#rightSleeve_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightSleeve_001-mesh-normals">
+          <float_array id="rightSleeve_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#rightSleeve_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightSleeve_001-mesh-map-0">
+          <float_array id="rightSleeve_001-mesh-map-0-array" count="72">0.75 0.25 0.6875 0.4375 0.6875 0.25 0.6875 0.25 0.625 0.4375 0.625 0.25 0.8750001 0.25 0.8125 0.4375 0.8125 0.25 0.8125 0.25 0.75 0.4375 0.75 0.25 0.6875 0.5 0.75 0.4375 0.75 0.5 0.75 0.4375 0.8125 0.5 0.8125 0.4375 0.75 0.25 0.75 0.4375 0.6875 0.4375 0.6875 0.25 0.6875 0.4375 0.625 0.4375 0.8750001 0.25 0.8750001 0.4375 0.8125 0.4375 0.8125 0.25 0.8125 0.4375 0.75 0.4375 0.6875 0.5 0.6875 0.4375 0.75 0.4375 0.75 0.4375 0.75 0.5 0.8125 0.5</float_array>
+          <technique_common>
+            <accessor source="#rightSleeve_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="rightSleeve_001-mesh-vertices">
+          <input semantic="POSITION" source="#rightSleeve_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#rightSleeve_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#rightSleeve_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#rightSleeve_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="rightArmArmor_001-mesh" name="rightArmArmor.001">
+      <mesh>
+        <source id="rightArmArmor_001-mesh-positions">
+          <float_array id="rightArmArmor_001-mesh-positions-array" count="24">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#rightArmArmor_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightArmArmor_001-mesh-normals">
+          <float_array id="rightArmArmor_001-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#rightArmArmor_001-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightArmArmor_001-mesh-map-0">
+          <float_array id="rightArmArmor_001-mesh-map-0-array" count="72">0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375</float_array>
+          <technique_common>
+            <accessor source="#rightArmArmor_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="rightArmArmor_001-mesh-vertices">
+          <input semantic="POSITION" source="#rightArmArmor_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#rightArmArmor_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#rightArmArmor_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#rightArmArmor_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 0 3 0 0 4 2 0 5 2 1 6 5 1 7 7 1 8 7 0 9 4 0 10 6 0 11 0 0 12 4 0 13 5 0 14 3 0 15 7 0 16 6 0 17 6 0 18 4 0 19 1 0 20 3 0 21 1 0 22 0 0 23 2 1 24 0 1 25 5 1 26 7 0 27 5 0 28 4 0 29 0 0 30 1 0 31 4 0 32 3 0 33 2 0 34 7 0 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="rightArm_001-mesh" name="rightArm.001">
+      <mesh>
+        <source id="rightArm_001-mesh-positions">
+          <float_array id="rightArm_001-mesh-positions-array" count="24">0.5 1.5 0.125 0.5 1.5 -0.125 0.5 0.75 0.125 0.5 0.75 -0.125 0.25 1.5 -0.125 0.25 1.5 0.125 0.25 0.75 -0.125 0.25 0.75 0.125</float_array>
+          <technique_common>
+            <accessor source="#rightArm_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightArm_001-mesh-normals">
+          <float_array id="rightArm_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#rightArm_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="rightArm_001-mesh-map-0">
+          <float_array id="rightArm_001-mesh-map-0-array" count="72">0.75 0.5 0.6875 0.6875 0.6875 0.5 0.6875 0.5 0.625 0.6875 0.625 0.5 0.8750001 0.5 0.8125 0.6875 0.8125 0.5 0.8125 0.5 0.75 0.6875 0.75 0.5 0.6875 0.75 0.75 0.6875 0.75 0.75 0.75 0.6875 0.8125 0.75 0.8125 0.6875 0.75 0.5 0.75 0.6875 0.6875 0.6875 0.6875 0.5 0.6875 0.6875 0.625 0.6875 0.8750001 0.5 0.8750001 0.6875 0.8125 0.6875 0.8125 0.5 0.8125 0.6875 0.75 0.6875 0.6875 0.75 0.6875 0.6875 0.75 0.6875 0.75 0.6875 0.75 0.75 0.8125 0.75</float_array>
+          <technique_common>
+            <accessor source="#rightArm_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="rightArm_001-mesh-vertices">
+          <input semantic="POSITION" source="#rightArm_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#rightArm_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#rightArm_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#rightArm_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="leftSleeve_001-mesh" name="leftSleeve.001">
+      <mesh>
+        <source id="leftSleeve_001-mesh-positions">
+          <float_array id="leftSleeve_001-mesh-positions-array" count="24">-0.234375 1.515625 0.140625 -0.234375 1.515625 -0.140625 -0.234375 0.734375 0.140625 -0.234375 0.734375 -0.140625 -0.515625 1.515625 -0.140625 -0.515625 1.515625 0.140625 -0.515625 0.734375 -0.140625 -0.515625 0.734375 0.140625</float_array>
+          <technique_common>
+            <accessor source="#leftSleeve_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftSleeve_001-mesh-normals">
+          <float_array id="leftSleeve_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#leftSleeve_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftSleeve_001-mesh-map-0">
+          <float_array id="leftSleeve_001-mesh-map-0-array" count="72">0.8750001 0 0.8125 0.1875 0.8125 0 0.8125 0 0.75 0.1875 0.75 0 1 0 0.9375 0.1875 0.9375 0 0.9375 0 0.8750001 0.1875 0.8750001 0 0.8125 0.25 0.8750001 0.1875 0.8750001 0.25 0.8750001 0.1875 0.9375 0.25 0.9375 0.1875 0.8750001 0 0.8750001 0.1875 0.8125 0.1875 0.8125 0 0.8125 0.1875 0.75 0.1875 1 0 1 0.1875 0.9375 0.1875 0.9375 0 0.9375 0.1875 0.8750001 0.1875 0.8125 0.25 0.8125 0.1875 0.8750001 0.1875 0.8750001 0.1875 0.8750001 0.25 0.9375 0.25</float_array>
+          <technique_common>
+            <accessor source="#leftSleeve_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="leftSleeve_001-mesh-vertices">
+          <input semantic="POSITION" source="#leftSleeve_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#leftSleeve_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#leftSleeve_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#leftSleeve_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="leftArmArmor_001-mesh" name="leftArmArmor.001">
+      <mesh>
+        <source id="leftArmArmor_001-mesh-positions">
+          <float_array id="leftArmArmor_001-mesh-positions-array" count="24">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#leftArmArmor_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftArmArmor_001-mesh-normals">
+          <float_array id="leftArmArmor_001-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#leftArmArmor_001-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftArmArmor_001-mesh-map-0">
+          <float_array id="leftArmArmor_001-mesh-map-0-array" count="72">0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375</float_array>
+          <technique_common>
+            <accessor source="#leftArmArmor_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="leftArmArmor_001-mesh-vertices">
+          <input semantic="POSITION" source="#leftArmArmor_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#leftArmArmor_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#leftArmArmor_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#leftArmArmor_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 0 3 0 0 4 2 0 5 2 1 6 5 1 7 7 1 8 7 0 9 4 0 10 6 0 11 0 0 12 4 0 13 5 0 14 3 0 15 7 0 16 6 0 17 6 0 18 4 0 19 1 0 20 3 0 21 1 0 22 0 0 23 2 1 24 0 1 25 5 1 26 7 0 27 5 0 28 4 0 29 0 0 30 1 0 31 4 0 32 3 0 33 2 0 34 7 0 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="leftArm_001-mesh" name="leftArm.001">
+      <mesh>
+        <source id="leftArm_001-mesh-positions">
+          <float_array id="leftArm_001-mesh-positions-array" count="24">-0.25 1.5 0.125 -0.25 1.5 -0.125 -0.25 0.75 0.125 -0.25 0.75 -0.125 -0.5 1.5 -0.125 -0.5 1.5 0.125 -0.5 0.75 -0.125 -0.5 0.75 0.125</float_array>
+          <technique_common>
+            <accessor source="#leftArm_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftArm_001-mesh-normals">
+          <float_array id="leftArm_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#leftArm_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="leftArm_001-mesh-map-0">
+          <float_array id="leftArm_001-mesh-map-0-array" count="72">0.625 0 0.5625 0.1875 0.5625 0 0.5625 0 0.5 0.1875 0.5 0 0.75 0 0.6875 0.1875 0.6875 0 0.6875 0 0.625 0.1875 0.625 0 0.5625 0.25 0.625 0.1875 0.625 0.25 0.625 0.1875 0.6875 0.25 0.6875 0.1875 0.625 0 0.625 0.1875 0.5625 0.1875 0.5625 0 0.5625 0.1875 0.5 0.1875 0.75 0 0.75 0.1875 0.6875 0.1875 0.6875 0 0.6875 0.1875 0.625 0.1875 0.5625 0.25 0.5625 0.1875 0.625 0.1875 0.625 0.1875 0.625 0.25 0.6875 0.25</float_array>
+          <technique_common>
+            <accessor source="#leftArm_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="leftArm_001-mesh-vertices">
+          <input semantic="POSITION" source="#leftArm_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#leftArm_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#leftArm_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#leftArm_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="helmet_001-mesh" name="helmet.001">
+      <mesh>
+        <source id="helmet_001-mesh-positions">
+          <float_array id="helmet_001-mesh-positions-array" count="24">0 1.5 0 0 1.5 0 0 1.5 0 0 1.5 0 0 1.5 0 0 1.5 0 0 1.5 0 0 1.5 0</float_array>
+          <technique_common>
+            <accessor source="#helmet_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="helmet_001-mesh-normals">
+          <float_array id="helmet_001-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#helmet_001-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="helmet_001-mesh-map-0">
+          <float_array id="helmet_001-mesh-map-0-array" count="72">0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375 0 -0.359375</float_array>
+          <technique_common>
+            <accessor source="#helmet_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="helmet_001-mesh-vertices">
+          <input semantic="POSITION" source="#helmet_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#helmet_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#helmet_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#helmet_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 0 3 0 0 4 2 0 5 2 1 6 5 1 7 7 1 8 7 0 9 4 0 10 6 0 11 0 0 12 4 0 13 5 0 14 3 0 15 7 0 16 6 0 17 6 0 18 4 0 19 1 0 20 3 0 21 1 0 22 0 0 23 2 1 24 0 1 25 5 1 26 7 0 27 5 0 28 4 0 29 0 0 30 1 0 31 4 0 32 3 0 33 2 0 34 7 0 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="hat_001-mesh" name="hat.001">
+      <mesh>
+        <source id="hat_001-mesh-positions">
+          <float_array id="hat_001-mesh-positions-array" count="24">0.28125 2.03125 0.28125 0.28125 2.03125 -0.28125 0.28125 1.46875 0.28125 0.28125 1.46875 -0.28125 -0.28125 2.03125 -0.28125 -0.28125 2.03125 0.28125 -0.28125 1.46875 -0.28125 -0.28125 1.46875 0.28125</float_array>
+          <technique_common>
+            <accessor source="#hat_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hat_001-mesh-normals">
+          <float_array id="hat_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#hat_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hat_001-mesh-map-0">
+          <float_array id="hat_001-mesh-map-0-array" count="72">0.75 0.75 0.625 0.8750001 0.625 0.75 0.625 0.75 0.5 0.8750001 0.5 0.75 1 0.75 0.8750001 0.8750001 0.8750001 0.75 0.8750001 0.75 0.75 0.8750001 0.75 0.75 0.625 1 0.75 0.8750001 0.75 1 0.75 0.8750001 0.8750001 1 0.8750001 0.8750001 0.75 0.75 0.75 0.8750001 0.625 0.8750001 0.625 0.75 0.625 0.8750001 0.5 0.8750001 1 0.75 1 0.8750001 0.8750001 0.8750001 0.8750001 0.75 0.8750001 0.8750001 0.75 0.8750001 0.625 1 0.625 0.8750001 0.75 0.8750001 0.75 0.8750001 0.75 1 0.8750001 1</float_array>
+          <technique_common>
+            <accessor source="#hat_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hat_001-mesh-vertices">
+          <input semantic="POSITION" source="#hat_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#hat_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hat_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hat_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="head_001-mesh" name="head.001">
+      <mesh>
+        <source id="head_001-mesh-positions">
+          <float_array id="head_001-mesh-positions-array" count="24">0.25 2 0.25 0.25 2 -0.25 0.25 1.5 0.25 0.25 1.5 -0.25 -0.25 2 -0.25 -0.25 2 0.25 -0.25 1.5 -0.25 -0.25 1.5 0.25</float_array>
+          <technique_common>
+            <accessor source="#head_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="head_001-mesh-normals">
+          <float_array id="head_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#head_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="head_001-mesh-map-0">
+          <float_array id="head_001-mesh-map-0-array" count="72">0.25 0.75 0.125 0.8750001 0.125 0.75 0.125 0.75 0 0.8750001 0 0.75 0.5 0.75 0.375 0.8750001 0.375 0.75 0.375 0.75 0.25 0.8750001 0.25 0.75 0.125 1 0.25 0.8750001 0.25 1 0.25 0.8750001 0.375 1 0.375 0.8750001 0.25 0.75 0.25 0.8750001 0.125 0.8750001 0.125 0.75 0.125 0.8750001 0 0.8750001 0.5 0.75 0.5 0.8750001 0.375 0.8750001 0.375 0.75 0.375 0.8750001 0.25 0.8750001 0.125 1 0.125 0.8750001 0.25 0.8750001 0.25 0.8750001 0.25 1 0.375 1</float_array>
+          <technique_common>
+            <accessor source="#head_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="head_001-mesh-vertices">
+          <input semantic="POSITION" source="#head_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#head_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#head_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#head_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="jacket_001-mesh" name="jacket.001">
+      <mesh>
+        <source id="jacket_001-mesh-positions">
+          <float_array id="jacket_001-mesh-positions-array" count="24">0.265625 1.515625 0.140625 0.265625 1.515625 -0.140625 0.265625 0.734375 0.140625 0.265625 0.734375 -0.140625 -0.265625 1.515625 -0.140625 -0.265625 1.515625 0.140625 -0.265625 0.734375 -0.140625 -0.265625 0.734375 0.140625</float_array>
+          <technique_common>
+            <accessor source="#jacket_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="jacket_001-mesh-normals">
+          <float_array id="jacket_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#jacket_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="jacket_001-mesh-map-0">
+          <float_array id="jacket_001-mesh-map-0-array" count="72">0.4375 0.25 0.3125 0.4375 0.3125 0.25 0.3125 0.25 0.25 0.4375 0.25 0.25 0.625 0.25 0.5 0.4375 0.5 0.25 0.5 0.25 0.4375 0.4375 0.4375 0.25 0.3125 0.5 0.4375 0.4375 0.4375 0.5 0.4375 0.4375 0.5625 0.5 0.5625 0.4375 0.4375 0.25 0.4375 0.4375 0.3125 0.4375 0.3125 0.25 0.3125 0.4375 0.25 0.4375 0.625 0.25 0.625 0.4375 0.5 0.4375 0.5 0.25 0.5 0.4375 0.4375 0.4375 0.3125 0.5 0.3125 0.4375 0.4375 0.4375 0.4375 0.4375 0.4375 0.5 0.5625 0.5</float_array>
+          <technique_common>
+            <accessor source="#jacket_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="jacket_001-mesh-vertices">
+          <input semantic="POSITION" source="#jacket_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#jacket_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#jacket_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#jacket_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="belt_001-mesh" name="belt.001">
+      <mesh>
+        <source id="belt_001-mesh-positions">
+          <float_array id="belt_001-mesh-positions-array" count="24">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#belt_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="belt_001-mesh-normals">
+          <float_array id="belt_001-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#belt_001-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="belt_001-mesh-map-0">
+          <float_array id="belt_001-mesh-map-0-array" count="72">0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75</float_array>
+          <technique_common>
+            <accessor source="#belt_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="belt_001-mesh-vertices">
+          <input semantic="POSITION" source="#belt_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#belt_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#belt_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#belt_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 0 3 0 0 4 2 0 5 2 1 6 5 1 7 7 1 8 7 0 9 4 0 10 6 0 11 0 0 12 4 0 13 5 0 14 3 0 15 7 0 16 6 0 17 6 0 18 4 0 19 1 0 20 3 0 21 1 0 22 0 0 23 2 1 24 0 1 25 5 1 26 7 0 27 5 0 28 4 0 29 0 0 30 1 0 31 4 0 32 3 0 33 2 0 34 7 0 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="bodyArmor_001-mesh" name="bodyArmor.001">
+      <mesh>
+        <source id="bodyArmor_001-mesh-positions">
+          <float_array id="bodyArmor_001-mesh-positions-array" count="24">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#bodyArmor_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bodyArmor_001-mesh-normals">
+          <float_array id="bodyArmor_001-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#bodyArmor_001-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bodyArmor_001-mesh-map-0">
+          <float_array id="bodyArmor_001-mesh-map-0-array" count="72">0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75 0.25 0.75</float_array>
+          <technique_common>
+            <accessor source="#bodyArmor_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="bodyArmor_001-mesh-vertices">
+          <input semantic="POSITION" source="#bodyArmor_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#bodyArmor_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#bodyArmor_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#bodyArmor_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 0 3 0 0 4 2 0 5 2 1 6 5 1 7 7 1 8 7 0 9 4 0 10 6 0 11 0 0 12 4 0 13 5 0 14 3 0 15 7 0 16 6 0 17 6 0 18 4 0 19 1 0 20 3 0 21 1 0 22 0 0 23 2 1 24 0 1 25 5 1 26 7 0 27 5 0 28 4 0 29 0 0 30 1 0 31 4 0 32 3 0 33 2 0 34 7 0 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="body_001-mesh" name="body.001">
+      <mesh>
+        <source id="body_001-mesh-positions">
+          <float_array id="body_001-mesh-positions-array" count="24">0.25 1.5 0.125 0.25 1.5 -0.125 0.25 0.75 0.125 0.25 0.75 -0.125 -0.25 1.5 -0.125 -0.25 1.5 0.125 -0.25 0.75 -0.125 -0.25 0.75 0.125</float_array>
+          <technique_common>
+            <accessor source="#body_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="body_001-mesh-normals">
+          <float_array id="body_001-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#body_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="body_001-mesh-map-0">
+          <float_array id="body_001-mesh-map-0-array" count="72">0.4375 0.5 0.3125 0.6875 0.3125 0.5 0.3125 0.5 0.25 0.6875 0.25 0.5 0.625 0.5 0.5 0.6875 0.5 0.5 0.5 0.5 0.4375 0.6875 0.4375 0.5 0.3125 0.75 0.4375 0.6875 0.4375 0.75 0.4375 0.6875 0.5625 0.75 0.5625 0.6875 0.4375 0.5 0.4375 0.6875 0.3125 0.6875 0.3125 0.5 0.3125 0.6875 0.25 0.6875 0.625 0.5 0.625 0.6875 0.5 0.6875 0.5 0.5 0.5 0.6875 0.4375 0.6875 0.3125 0.75 0.3125 0.6875 0.4375 0.6875 0.4375 0.6875 0.4375 0.75 0.5625 0.75</float_array>
+          <technique_common>
+            <accessor source="#body_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="body_001-mesh-vertices">
+          <input semantic="POSITION" source="#body_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_0_001-material" count="12">
+          <input semantic="VERTEX" source="#body_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#body_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#body_001-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 1 0 1 3 0 2 3 1 3 0 1 4 2 1 5 2 2 6 5 2 7 7 2 8 7 3 9 4 3 10 6 3 11 0 4 12 4 4 13 5 4 14 3 5 15 7 5 16 6 5 17 6 0 18 4 0 19 1 0 20 3 1 21 1 1 22 0 1 23 2 2 24 0 2 25 5 2 26 7 3 27 5 3 28 4 3 29 0 4 30 1 4 31 4 4 32 3 5 33 2 5 34 7 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="rightLeg" name="rightLeg" type="NODE">
+        <matrix sid="transform">1 0 0 0.11875 0 -1.62921e-7 -1 -3.27835e-8 0 1 -1.62921e-7 0.75 0 0 0 1</matrix>
+        <node id="rightLeg_001" name="rightLeg.001" type="NODE">
+          <matrix sid="transform">1 0 0 -0.11875 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#rightLeg_001-mesh" name="rightLeg.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                  <bind_vertex_input semantic="0625594f-32d8-424c-8654-c421cd8873ad-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="rightLegging" name="rightLegging" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+          <node id="rightLegging_001" name="rightLegging.001" type="NODE">
+            <matrix sid="transform">1 0 0 -0.11875 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#rightLegging_001-mesh" name="rightLegging.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="4db0995e-507c-9b1d-e16d-0d9a919e2679-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="rightPants" name="rightPants" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+          <node id="rightPants_001" name="rightPants.001" type="NODE">
+            <matrix sid="transform">1 0 0 -0.11875 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#rightPants_001-mesh" name="rightPants.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="782501bb-1981-5ad0-5edd-c1712a18d06a-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="rightLegArmorOffset" name="rightLegArmorOffset" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="rightBootArmorOffset" name="rightBootArmorOffset" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="leftLeg" name="leftLeg" type="NODE">
+        <matrix sid="transform">1 0 0 -0.11875 0 -1.62921e-7 -1 -3.27835e-8 0 1 -1.62921e-7 0.75 0 0 0 1</matrix>
+        <node id="leftLeg_001" name="leftLeg.001" type="NODE">
+          <matrix sid="transform">1 0 0 0.11875 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#leftLeg_001-mesh" name="leftLeg.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                  <bind_vertex_input semantic="9c32e0e4-2b5a-f12d-a5db-17f1ce6d1885-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="leftLegging" name="leftLegging" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+          <node id="leftLegging_001" name="leftLegging.001" type="NODE">
+            <matrix sid="transform">1 0 0 0.11875 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#leftLegging_001-mesh" name="leftLegging.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="bb64c1c4-e47f-2674-8e59-1f2eb6971d3f-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="leftPants" name="leftPants" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+          <node id="leftPants_001" name="leftPants.001" type="NODE">
+            <matrix sid="transform">1 0 0 0.11875 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#leftPants_001-mesh" name="leftPants.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="43dcf99f-3067-17f8-1301-07b25f34569a-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="leftLegArmorOffset" name="leftLegArmorOffset" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="leftBootArmorOffset" name="leftBootArmorOffset" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5.34112e-15 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="rightArm" name="rightArm" type="NODE">
+        <matrix sid="transform">1 0 0 0.3125 0 1 0 -6.01032e-8 0 0 1 1.375 0 0 0 1</matrix>
+        <node id="rightArm_001" name="rightArm.001" type="NODE">
+          <matrix sid="transform">1 -1.50996e-7 -3.25841e-7 -0.3124998 -3.25841e-7 -1.62921e-7 -1 4.17222e-8 1.50996e-7 1 -1.62921e-7 -1.375 0 0 0 1</matrix>
+          <instance_geometry url="#rightArm_001-mesh" name="rightArm.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                  <bind_vertex_input semantic="9ae065d0-31cb-e371-83fb-385bfea7775b-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="rightArmArmor" name="rightArmArmor" type="NODE">
+          <matrix sid="transform">1 -1.50996e-7 -3.25841e-7 0 -3.25841e-7 -1.62921e-7 -1 0 1.50996e-7 1 -1.62921e-7 0 0 0 0 1</matrix>
+          <node id="rightArmArmor_001" name="rightArmArmor.001" type="NODE">
+            <matrix sid="transform">1 0 3.82137e-15 -0.3125 0 1 0 -1.375 3.82137e-15 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#rightArmArmor_001-mesh" name="rightArmArmor.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="1373a98d-c93d-78dc-aabc-96df2bc4cf8b-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="rightSleeve" name="rightSleeve" type="NODE">
+          <matrix sid="transform">1 -1.50996e-7 -3.25841e-7 0 -3.25841e-7 -1.62921e-7 -1 0 1.50996e-7 1 -1.62921e-7 0 0 0 0 1</matrix>
+          <node id="rightSleeve_001" name="rightSleeve.001" type="NODE">
+            <matrix sid="transform">1 0 3.82137e-15 -0.3125 0 1 0 -1.375 3.82137e-15 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#rightSleeve_001-mesh" name="rightSleeve.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="b6648f14-e27c-8081-bcb9-c5e35f3f8347-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="rightArmArmorOffset" name="rightArmArmorOffset" type="NODE">
+          <matrix sid="transform">1 -1.50996e-7 -3.25841e-7 0 -3.25841e-7 -1.62921e-7 -1 0 1.50996e-7 1 -1.62921e-7 0 0 0 0 1</matrix>
+        </node>
+        <node id="rightItem" name="rightItem" type="NODE">
+          <matrix sid="transform">1 -1.50996e-7 -3.25841e-7 0.06250003 -3.25841e-7 -1.62921e-7 -1 -0.06250004 1.50996e-7 1 -1.62921e-7 -0.4375 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="leftArm" name="leftArm" type="NODE">
+        <matrix sid="transform">1 0 0 -0.3125 0 1 0 -6.01032e-8 0 0 1 1.375 0 0 0 1</matrix>
+        <node id="leftArm_001" name="leftArm.001" type="NODE">
+          <matrix sid="transform">1 3.25841e-7 -1.50996e-7 0.3124996 -1.50996e-7 -1.62921e-7 -1 -1.07289e-7 -3.25841e-7 1 -1.62921e-7 -1.375 0 0 0 1</matrix>
+          <instance_geometry url="#leftArm_001-mesh" name="leftArm.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                  <bind_vertex_input semantic="e1fbe043-b862-f215-dea0-4f247a2667a9-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="leftArmArmor" name="leftArmArmor" type="NODE">
+          <matrix sid="transform">1 3.25841e-7 -1.50996e-7 0 -1.50996e-7 -1.62921e-7 -1 0 -3.25841e-7 1 -1.62921e-7 0 0 0 0 1</matrix>
+          <node id="leftArmArmor_001" name="leftArmArmor.001" type="NODE">
+            <matrix sid="transform">1 0 -3.75711e-15 0.3125 0 1 0 -1.375 -3.75711e-15 0 1 1.42109e-14 0 0 0 1</matrix>
+            <instance_geometry url="#leftArmArmor_001-mesh" name="leftArmArmor.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="2a1a43ab-80ef-9a69-c4c0-ae58f0e5417a-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="leftSleeve" name="leftSleeve" type="NODE">
+          <matrix sid="transform">1 3.25841e-7 -1.50996e-7 0 -1.50996e-7 -1.62921e-7 -1 0 -3.25841e-7 1 -1.62921e-7 0 0 0 0 1</matrix>
+          <node id="leftSleeve_001" name="leftSleeve.001" type="NODE">
+            <matrix sid="transform">1 0 -3.75711e-15 0.3125 0 1 0 -1.375 -3.75711e-15 0 1 1.42109e-14 0 0 0 1</matrix>
+            <instance_geometry url="#leftSleeve_001-mesh" name="leftSleeve.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="b316a79f-55cc-891e-efbb-b0a8a746448e-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="leftArmArmorOffset" name="leftArmArmorOffset" type="NODE">
+          <matrix sid="transform">1 3.25841e-7 -1.50996e-7 0 -1.50996e-7 -1.62921e-7 -1 0 -3.25841e-7 1 -1.62921e-7 0 0 0 0 1</matrix>
+        </node>
+        <node id="leftItem" name="leftItem" type="NODE">
+          <matrix sid="transform">1 3.25841e-7 -1.50996e-7 -0.06250015 -1.50996e-7 -1.62921e-7 -1 -0.06250001 -3.25841e-7 1 -1.62921e-7 -0.4375 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="head" name="head" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 -1.62921e-7 -1 -6.55671e-8 0 1 -1.62921e-7 1.5 0 0 0 1</matrix>
+        <node id="head_001" name="head.001" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#head_001-mesh" name="head.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                  <bind_vertex_input semantic="cd179561-13a1-6689-25c2-4b58ca8fb236-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="hat" name="hat" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 1.06822e-14 0 0 1 0 0 0 0 1</matrix>
+          <node id="hat_001" name="hat.001" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#hat_001-mesh" name="hat.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="55925e68-129e-c073-5876-abc2a358eca2-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="helmet" name="helmet" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 1.06822e-14 0 0 1 0 0 0 0 1</matrix>
+          <node id="helmet_001" name="helmet.001" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#helmet_001-mesh" name="helmet.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="18950047-67d5-794a-30ba-013cdb8eb7ab-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="helmetArmorOffset" name="helmetArmorOffset" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 1.06822e-14 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="body" name="body" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 -1.62921e-7 -1 -6.55671e-8 0 1 -1.62921e-7 1.5 0 0 0 1</matrix>
+        <node id="body_001" name="body.001" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#body_001-mesh" name="body.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                  <bind_vertex_input semantic="b5705e07-c6c2-8b0a-9ab1-1855af456cf8-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="bodyArmor" name="bodyArmor" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 1.06822e-14 0 0 1 0 0 0 0 1</matrix>
+          <node id="bodyArmor_001" name="bodyArmor.001" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#bodyArmor_001-mesh" name="bodyArmor.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="9a59f594-144b-79c1-17ae-95fcecabd7b0-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="belt" name="belt" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+          <node id="belt_001" name="belt.001" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#belt_001-mesh" name="belt.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="429a10da-6bc6-f2a2-efae-6c7411b649e9-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="jacket" name="jacket" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 1.06822e-14 0 0 1 0 0 0 0 1</matrix>
+          <node id="jacket_001" name="jacket.001" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#jacket_001-mesh" name="jacket.001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Material_0_001-material" target="#Material_0_001-material">
+                    <bind_vertex_input semantic="096fef13-d47d-3833-fb3b-855af2b637e8-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="bodyArmorOffset" name="bodyArmorOffset" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 1.06822e-14 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="waist" name="waist" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 -0.75 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
